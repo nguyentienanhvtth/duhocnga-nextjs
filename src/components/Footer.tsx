@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import NewsSection from './NewsSection';
 
 export default function Footer() {
   return (
@@ -94,93 +94,7 @@ export default function Footer() {
           </div>
 
           {/* Middle Column - News Section */}
-          <div className="lg:col-span-4">
-            <div className="grid grid-cols-1 gap-y-6">
-              <div className="flex items-start">
-                <div className="text-center mr-4 min-w-10">
-                  <span className="block text-xl font-bold text-gray-700">1</span>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium hover:text-red-600">
-                    <Link href="/tin-tuc/quan-doi-nhan-dan-viet-nam-tham-gia-duyet-binh-tai-quang-truong-do">
-                      Quân đội Nhân dân Việt Nam tham gia duyệt binh tại Quảng trường Đỏ
-                    </Link>
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">23/04/2025</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="text-center mr-4 min-w-10">
-                  <span className="block text-xl font-bold text-gray-700">2</span>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium hover:text-red-600">
-                    <Link href="/tin-tuc/hoi-sach-mam-2025-hanh-trinh-cua-tam-long-va-tri-thuc-viet-tai-nga">
-                      Hội sách Mầm 2025: Hành trình của tâm lòng và trí thức Việt tại Nga
-                    </Link>
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">23/04/2025</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="text-center mr-4 min-w-10">
-                  <span className="block text-xl font-bold text-gray-700">3</span>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium hover:text-red-600">
-                    <Link href="/tin-tuc/dau-an-que-huong-dam-net-trong-ngay-viet-nam-tai-dai-hoc-tai-chinh-finu">
-                      Dấu ấn quê hương đậm nét trong Ngày Việt Nam tại Đại học Tài chính FinU
-                    </Link>
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">17/04/2025</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="text-center mr-4 min-w-10">
-                  <span className="block text-xl font-bold text-gray-700">4</span>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium hover:text-red-600">
-                    <Link href="/tin-tuc/sinh-vien-khoa-nga-gap-go-nha-tuyen-dung-viec-lam-tieng-nga">
-                      Sinh viên Khoa Nga gặp gỡ nhà tuyển dụng việc làm tiếng Nga
-                    </Link>
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">15/04/2025</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="text-center mr-4 min-w-10">
-                  <span className="block text-xl font-bold text-gray-700">5</span>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium hover:text-red-600">
-                    <Link href="/tin-tuc/tang-cuong-hop-tac-giao-duc-giua-viet-nam-va-lien-bang-nga">
-                      Tăng cường hợp tác giáo dục giữa Việt Nam và Liên bang Nga
-                    </Link>
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">15/04/2025</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="text-center mr-4 min-w-10">
-                  <span className="block text-xl font-bold text-gray-700">6</span>
-                </div>
-                <div>
-                  <h3 className="text-base font-medium hover:text-red-600">
-                    <Link href="/tin-tuc/ha-noi-va-moscow-tang-cuong-hop-tac-toan-dien-tren-nhieu-linh-vuc">
-                      Hà Nội và Moscow tăng cường hợp tác toàn diện trên nhiều lĩnh vực
-                    </Link>
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">15/04/2025</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <NewsSection />
 
           {/* Right Column - Facebook Iframe */}
           <div className="lg:col-span-4">
