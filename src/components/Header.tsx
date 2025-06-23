@@ -12,7 +12,7 @@ export default function Header() {
       <div className="ct-container mx-auto px-4">
         {/* Top header with logo and main navigation */}
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center py-2">
+          <Link href="/" className="flex! items-center! py-2">
             <Image
               src="/images/logo.webp"
               alt="Du học Nga"
@@ -23,8 +23,8 @@ export default function Header() {
           </Link>
 
           {/* Main navigation */}
-          <nav className="hidden lg:flex h-full">
-            <div className="flex h-full">
+          <nav className="hidden! lg:flex! h-full">
+            <div className="flex! h-full">
               <NavLink href="/" label="TRANG CHỦ" />
               <NavDropdown
                 label="GIỚI THIỆU"
@@ -101,9 +101,9 @@ export default function Header() {
                 ]}
               />
               <NavLink href="/lien-he" label="LIÊN HỆ" />
-              <div className="flex items-center px-4">
-                <button className="text-[#1e3a8a] focus:outline-none">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="flex! items-center! px-4!">
+                <button className="text-[#1e3a8a]! focus:outline-none!">
+                  <svg className="h-5! w-5! " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </button>
@@ -112,7 +112,7 @@ export default function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden py-2">
+          <div className="lg:hidden! py-2!">
             <button className="text-[#1e3a8a] focus:outline-none">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -123,7 +123,7 @@ export default function Header() {
       </div>
 
       {/* Mobile menu (hidden by default) */}
-      <div className="hidden lg:hidden bg-white border-t border-gray-200">
+      <div className="hidden! lg:hidden! bg-white! border-t! border-gray-200!">
         <div className="container mx-auto px-4 py-2">
           <div className="flex flex-col space-y-2">
             <MobileNavLink href="/" label="Trang chủ" />
@@ -143,7 +143,7 @@ export default function Header() {
 
 function NavLink({ href, label }: { href: string; label: string }) {
   return (
-    <Link href={href} className="flex items-center px-4 h-[120px] text-sm font-medium hover:bg-[#1e3a8a] hover:text-white transition-colors">
+    <Link href={href} className="flex! items-center! px-2! h-[120px]! text-sm! font-medium! hover:bg-[#1e3a8a]! hover:text-white! transition-colors!">
       {label}
     </Link>
   );
@@ -151,7 +151,7 @@ function NavLink({ href, label }: { href: string; label: string }) {
 
 function MobileNavLink({ href, label }: { href: string; label: string }) {
   return (
-    <Link href={href} className="text-[#1e3a8a] items-center hover:text-[#1e3a8a] hover:bg-gray-100 py-2 px-4 block">
+    <Link href={href} className="text-[#1e3a8a]! items-center! hover:text-[#1e3a8a]! hover:bg-gray-100! py-2! px-4! block!">
       {label}
     </Link>
   );
@@ -174,25 +174,25 @@ function NavDropdown({
 }) {
   return (
     <div
-      className="relative group h-[120px]"
+      className="relative group h-[120px]! "
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <Link 
         href={href}
-        className={`flex items-center px-4 h-full text-sm font-medium ${active ? 'bg-[#1e3a8a] text-white' : 'hover:bg-[#1e3a8a] hover:text-white'} transition-colors`}
+        className={`flex! items-center! px-2! h-full! text-sm! font-medium! ${active ? 'bg-[#1e3a8a]! text-white!' : 'hover:bg-[#1e3a8a]! hover:text-white!'} transition-colors!`}
       >
         {label}
-        <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="ml-1! h-4! w-4! " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </Link>
-      <div className={`absolute left-0 w-64 bg-[#1e3a8a] shadow-lg z-10 ${active ? 'block' : 'hidden'}`}>
+      <div className={`absolute left-0! w-64! bg-[#1e3a8a]! shadow-lg! z-10! ${active ? 'block!' : 'hidden!'}`}>
         {items.map((item, index) => (
           <Link
             key={index}
             href={item.href}
-            className={`block px-4 py-2 text-sm text-white hover:bg-white hover:text-[#1e3a8a] ${index !== 0 ? 'border-t border-white border-dotted' : ''}`}
+            className={`block! px-2! py-2! text-sm! text-white! hover:bg-white! hover:text-[#1e3a8a]! ${index !== 0 ? 'border-t! border-white! border-dotted!' : ''}`}
           >
             {item.label}
           </Link>

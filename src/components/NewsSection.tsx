@@ -86,19 +86,19 @@ export default function NewsSection() {
 
   return (
     <div className="lg:col-span-4">
-      <div className="grid grid-cols-1 gap-y-6">
+      <div className="grid! grid-cols-1! gap-y-6!">
         {posts.map((post, index) => (
-          <div key={post.id} className="flex items-start">
+          <div key={post.id} className="flex! items-start!">
             <div className="text-center mr-4 min-w-10">
-              <span className="block text-xl font-bold text-gray-700">{index + 1}</span>
+              <span className="block! text-xl! font-bold! text-gray-700!">{index + 1}</span>
             </div>
             <div>
-              <h3 className="text-base font-medium hover:text-red-600">
+              <h3 className="text-base! font-medium! hover:text-red-600!">
                 <Link href={generateSlug(post.link)}>
                   {post.title.rendered}
                 </Link>
               </h3>
-              <p className="text-gray-500 text-sm mt-1">{formatDate(post.date)}</p>
+              <p className="text-gray-500! text-sm! mt-1!">{formatDate(post.date)}</p>
             </div>
           </div>
         ))}
